@@ -51,9 +51,10 @@ user_db.execute("""CREATE TABLE IF NOT EXISTS users
 user_db.commit()
 
 def insert_into_db(inputdata):
-    check = user_db.execute("SELECT * FROM users WHERE email=\'"+str(inputdata["email"])+"\'")
-    if check != None:
-        return None
+    check = user_db.execute("SELECT * FROM users WHERE email = '"+inputdata["email"].strip()+"'")
+    print(check, file=sys.stderr)
+    if not check[1]:
+        return {"success":"false"}
     query = """
         INSERT INTO users (
             first_name,
