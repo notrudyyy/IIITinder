@@ -1,0 +1,107 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 10%;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid black;
+}
+
+header nav ul,
+header nav ul li,
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-ul-1{
+    list-style: none;
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.nav-ul-2{
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.website-name{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 45%;
+}
+
+header nav ul li {
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.un {
+    display: inline-block;
+}
+
+.un::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+
+.un:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    color: black; /* Original color */
+    transition: color 0.3s ease; /* Transition duration and timing function */
+}
