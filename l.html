@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matched Users</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch matched users from API
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:5000/get-matches",
+                data: JSON.stringify({"hostel": "ABC"}),
+                contentType: "application/json",
+                dataType: "json",
+                success: function(data) {
+                    // Populate table with matched user data
+                    for (var i = 0; i < data.matches.length; i++) {
+                        var user = data.matches[i];
+                        var row = "<tr>";
+                        row += "<td>" + user.first_name + "</td>";
+                        row += "<td>" + user.last_name + "</td>";
+                        row += "<td>" + user.age + "</td>";
+                        row += "<td>" + user.number + "</td>";
+                        row += "<td>" + user.email + "</td>";
+                        row += "<td>" + user.hostel + "</td>";
+                        row += "<td>" + user.desc + "</td>";
+                        row += "<td>" + user.lang + "</td>";
+                        row += "<td>" + user.floor + "</td>";
+                        row += "<td>" + user.sleep + "</td>";
+                        row += "<td>" + user.env + "</td>";
+                        row += "<td>" + user.guests + "</td>";
+                        row += "<td>" + user.branch + "</td>";
+                        row += "<td>" + user.hobby + "</td>";
+                        row += "<td>" + user["non-veg"] + "</td>";
+                        row += "<td>" + user["room-desc"] + "</td>";
+                        row += "</tr>";
+                        $("#user-table").append(row);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Error fetching matched users: " + error);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Matched Users</h1>
+    <table id="user-table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Hostel</th>
+            <th>Description</th>
+            <th>Language</th>
+            <th>Floor</th>
+            <th>Sleep</th>
+            <th>Environment</th>
+            <th>Guests</th>
+            <th>Branch</th>
+            <th>Hobby</th>
+            <th>Non-Vegetarian</th>
+            <th>Room Description</th>
+        </tr>
+    </table>
+</body>
+</html>
