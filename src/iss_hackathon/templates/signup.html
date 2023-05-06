@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+    <title>IIITinder</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav-ul-1">
+          <li class="nav-button-1"><a href=""><span class="un nav-button">Home</span></a></li>
+          <li class="nav-button-2"><a href=""><span class="un nav-button">Find Roommates</span></a></li>
+          <li class="nav-button-3"><a href=""><span class="un nav-button">About Us</span></a></li>
+        </ul>
+        <div class="website-name">IIITinder</div>
+        <ul class="nav-ul-2">
+          <li class="nav-button-3"><a href="{{ url_for('signup')}}"><span class="un nav-button">Sign Up</span></a></li>
+          <li class="nav-button-3"><a href="{{ url_for('login') }}"><span class="un nav-button">Login</span></a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content-wrapper" align="center">
+         
+            <h1>Signup Page</h1>
+            <form method="POST" action="/signup">
+                <label for="username">Username:</label>
+                <input type="text" name="username" size="30" required><br><br><br><br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" size="30" required><br><br><br><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" size="30" required><br><br><br><br>
+                <label for="phone">Phone:</label>
+                <input type="text" name="phone" size="30"><br><br><br><br>
+                <label for="hostel">Hostel:</label>
+                <select name="hostel" maxlength="50" >
+                    <option value="Bakul">Bakul</option>
+                    <option value="Parijat A">Parijat A</option>
+                    <option value="Parijat B">Parijat B</option>
+                    <option value="Parijat C">Parijat C</option>
+                    <option value="OBH">OBH</option>
+                </select><br><br><br><br>
+                <input type="submit" value="Signup">
+            </form>
+        
+    </div>
+    
+    <footer>
+      <nav>
+        <ul class="nav-ul-1">
+          <li class="nav-button-1"><a href=""><span class="nav-button">Home</span></a></li>
+          <li class="nav-button-2"><a href=""><span class="nav-button">Find Roommates</span></a></li>
+          <li class="nav-button-3"><a href=""><span class="nav-button">About Us</span></a></li>
+          <li class="nav-button-3"><a href=""><span class="nav-button">Sign Up</span></a></li>
+          <li class="nav-button-3"><a href=""><span class="nav-button">Login</span></a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
