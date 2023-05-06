@@ -31,6 +31,8 @@
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -45,6 +47,7 @@ header {
     height: 10%;
     padding: 1rem 1rem;
     border-bottom: 1px solid black;
+    font-size: 2rem;
 }
 
 header nav ul,
@@ -64,15 +67,16 @@ header nav ul li a {
 .nav-ul-2{
     list-style: none;
     position: absolute;
-    right: 0;
+    right: 4%;
     top: 45%;
     transform: translateY(-50%);
 }
 
 .website-name{
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 3rem;
     position: absolute;
+    color: #FD597B;
     top: 45%;
     transform: translateY(-50%);
     left: 45%;
@@ -104,4 +108,37 @@ header nav ul li {
 .nav-button {
     color: black; /* Original color */
     transition: color 0.3s ease; /* Transition duration and timing function */
+}
+
+.content-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    height: 5%;
+    max-width: 100vw;
+}
+
+footer nav ul,
+footer nav ul li,
+footer nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer nav ul{
+    left: 30%;
+    list-style: none;
+    position: absolute;
+    top: 10%;
+    max-width: 50%;
+    transform: translateY(-50%);
+}
+
+footer nav ul li {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0 2rem;
 }
