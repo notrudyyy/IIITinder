@@ -1,0 +1,11 @@
+body{
+    background-color:lightcoral;
+}
+
+h1{
+    font-style: italic;
+    color:black;
+}
+.content-wrapper{
+    padding-top: 70px;
+}

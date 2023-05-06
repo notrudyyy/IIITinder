@@ -1,0 +1,150 @@
+body{
+  background-color:grey;
+}
+.content-wrapper{
+    position: absolute;
+    margin-top: 10%;
+    width: 100%;
+    margin-bottom: 20%;
+    padding-top: 50px;
+}
+
+.container {
+    overflow: hidden; /* Clear the float */
+    background-color: aquamarine;
+    margin-left: 40px;
+    margin-right: 40px;
+     
+
+  }
+
+.container:hover{
+  transform:scale(1.05);
+}  
+  
+  .image {
+    float: left; /* Float the image to the left */
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height:350px;
+    width:600px;
+    border-radius: 10px;
+     /* Add some margin to the right of the image */
+  }
+  
+  .text {
+    overflow: hidden; 
+    margin-top:50px;
+    margin-right: 40px;
+
+  }
+
+  .container p{
+    font-size: 20px;
+    font-style: oblique;
+  }
+  .heading h1{
+    color: white;
+
+    font-size: 50px;
+    
+  }
+
+  .heading p{
+    color: bisque;
+    font-size: 30px;
+  }
+
+
+
+  .container_1 {
+    overflow: hidden; /* Clear the float */
+    background-color: pink;
+    margin-left: 40px;
+    margin-right: 40px;
+     
+
+  }
+
+.container_1:hover{
+  transform:scale(1.05);
+}  
+  
+  .image_1 {
+    overflow: hidden;
+    float: right; /* Float the image to the left */
+    margin-right: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height:350px;
+    width:600px;
+    border-radius: 10px;
+     /* Add some margin to the right of the image */
+  }
+  
+  .text_1 {
+    overflow: hidden; 
+    margin-top:50px;
+    margin-left: 50px;
+
+  }
+
+  .container_1 p{
+    font-size: 20px;
+    font-style: oblique;
+  }
+
+   
+  
+
+    .container_2 {
+      overflow: hidden; /* Clear the float */
+      background-color:aquamarine;
+      margin-left: 40px;
+      margin-right: 40px;
+       
+  
+    }
+  
+  .container_2:hover{
+    transform:scale(1.05);
+  }  
+    
+    .image_2 {
+      float: left; /* Float the image to the left */
+      margin-right: 20px;
+      margin-left: 50px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      height:300px;
+      width:500px;
+      border-radius: 10px;
+       /* Add some margin to the right of the image */
+    }
+    
+    .text_2 {
+      overflow: hidden; 
+      margin-top:50px;
+      margin-right: 40px;
+  
+    }
+  
+    .container_2 p{
+      font-size: 20px;
+      font-style: oblique;
+    }
+
+
+    .image-row {
+      background-color: orchid;
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .image-row img {
+      width: 33.33%;
+    }
+    
