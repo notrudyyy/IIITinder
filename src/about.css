@@ -1,0 +1,306 @@
+ /*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  .container {
+    min-height:100%;
+    position:relative;
+    margin-bottom: 40%;
+ }
+
+header {
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 10%;
+    padding: 1rem 1rem;
+    background-color: #bdebeb;
+    /* border-bottom: 1px solid black; */
+    font-size: 2rem;
+}
+
+header nav ul,
+header nav ul li,
+header nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-ul-1{
+    list-style: none;
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    transform: translateY(-50%);
+}
+
+.nav-ul-2{
+    list-style: none;
+    position: absolute;
+    right: 4%;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.website-name{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    position: absolute;
+    color: #FD597B;
+    text-shadow: 1px 1px 1px #000000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+
+header nav ul li {
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.un {
+    display: inline-block;
+}
+
+.un::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #FD597B;
+    transition: 300ms;
+}
+
+.un:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    color: #000000; /* Original color */
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: color 0.3s ease; /* Transition duration and timing function */
+}
+
+footer {
+    position:absolute;
+    bottom:-75%;
+    width:100%;
+    height:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+ }
+
+footer nav ul,
+footer nav ul li,
+footer nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer nav ul{
+    left: 30%;
+    list-style: none;
+    position: absolute;
+    top: 10%;
+    max-width: 50%;
+    transform: translateY(-50%);
+}
+
+footer nav ul li {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+
+
+
+
+
+
+
+
+.content-wrapper{
+    background-color: #FD597B;
+    position: absolute;
+    padding: 20px;
+    margin-bottom: 0;
+    width: 100%;
+     
+}
+
+.container_0 {
+    overflow: hidden; /* Clear the float */
+    background-color: aquamarine;
+     
+
+  }
+
+.container_0:hover{
+  transform:scale(1.05);
+}  
+  
+  .image {
+    float: left; /* Float the image to the left */
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height:350px;
+    width:600px;
+    border-radius: 10px;
+     /* Add some margin to the right of the image */
+  }
+  
+  .text {
+    overflow: hidden; 
+    margin-top:50px;
+    margin-right: 40px;
+
+  }
+
+  .container_0 p{
+    font-size: 20px;
+    font-style: oblique;
+  }
+  .heading h1{
+    color: indigo;
+
+    font-size: 50px;
+    
+  }
+
+  .heading p{
+    color: white;
+    font-size: 30px;
+  }
+
+
+
+  .container_1 {
+    overflow: hidden; /* Clear the float */
+    background-color: pink;
+     
+
+  }
+
+.container_1:hover{
+  transform:scale(1.05);
+}  
+  
+  .image_1 {
+    overflow: hidden;
+    float: right; /* Float the image to the left */
+    margin-right: 20px;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height:350px;
+    width:600px;
+    border-radius: 10px;
+     /* Add some margin to the right of the image */
+  }
+  
+  .text_1 {
+    overflow: hidden; 
+    margin-top:50px;
+    margin-left: 50px;
+
+  }
+
+  .container_1 p{
+    font-size: 20px;
+    font-style: oblique;
+  }
+
+   
+  
+
+    .container_2 {
+      overflow: hidden; /* Clear the float */
+      background-color: aqua;
+       
+  
+    }
+  
+  .container_2:hover{
+    transform:scale(1.05);
+  }  
+    
+    .image_2 {
+      float: left; /* Float the image to the left */
+      margin-right: 20px;
+      margin-left: 50px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      height:300px;
+      width:500px;
+      border-radius: 10px;
+       /* Add some margin to the right of the image */
+    }
+    
+    .text_2 {
+      overflow: hidden; 
+      margin-top:50px;
+      margin-right: 40px;
+  
+    }
+  
+    .container_2 p{
+      font-size: 20px;
+      font-style: oblique;
+    }
+
+
+     .names span{
+        font-size: 25px;
+        display: inline-block;
+        margin-right: 15%; 
+        margin-left: 5%;
+
+     }
+    
+
+
+
+
+
+
+    
