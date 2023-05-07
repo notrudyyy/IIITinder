@@ -12,9 +12,9 @@ A web based roommate finding service for IIIT students.
 3. Profile sorting based on matching system, more likely to view similar profiles first.<br />
 
 <h1>Frameworks/Packages Used</h1>
-1. Javascript - Scrollreveal.js, jquery
-2. Python - sqlite3, flask
+1. Javascript - Scrollreveal.js, jquery<br />
+2. Python - sqlite3, flask<br />
 
 <h1>Contribtuions</h1>
-1. Backend(Flask), Javascript, Home Page, Sign Up Page, Update Page, Matches Page - Anirudh
-2. SQL Test Data, About Page - Ananya
+1. Backend(Flask), Javascript, Home Page, Sign Up Page, Update Page, Matches Page - Anirudh<br />
+2. SQL Test Data, About Page - Ananya<br />
