@@ -9,3 +9,27 @@ h1{
 .content-wrapper{
     padding-top: 70px;
 }
+
+.review_form{
+    margin-top: 40px;
+}
+
+
+#review_form {
+    background-color:lightgreen;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Style the table */
+  #data {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+  }
