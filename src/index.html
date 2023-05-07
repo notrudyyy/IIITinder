@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
     <title>IIITinder</title>
   </head>
   <body>
     <div class="container">
       <header>
         <nav>
-          <ul class="nav-ul-1">
+          <div class="website-name">IIITinder</div>
+          <ul class="nav-ul-2">
             <li class="nav-button-1"><a href=""><span class="un nav-button">Home</span></a></li>
             <li class="nav-button-2"><a href=""><span class="un nav-button">Find Roommates</span></a></li>
             <li class="nav-button-3"><a href=""><span class="un nav-button">About Us</span></a></li>
-          </ul>
-          <div class="website-name">IIITinder</div>
-          <ul class="nav-ul-2">
             <li class="nav-button-3"><a href=""><span class="un nav-button">Sign Up</span></a></li>
             <li class="nav-button-3"><a href=""><span class="un nav-button">Login</span></a></li>
           </ul>
@@ -26,14 +27,22 @@
       <div class="content-wrapper">
         <div class="splash-page">
           <div class="splash-header">
-            Find the roommate you've <br />wanted all your life.
+            Find the roommate you've<br /> always looked for.
           </div>
-          <div class="splash-image">
-            <img src="splashpageimg.png">
+          <div class="splash-images">
+            <div class="img1">
+              <img src="home1.png">
+            </div>
+            <div class="img2">
+              <img src="home2.png">
+            </div>
+            <div class="img3">
+              <img src="home3.png">
+            </div>
+            <div class="img4">
+              <img src="home4.png">
+            </div>
           </div>
-        </div>
-        <div class="fake-test-div">
-          
         </div>
       </div>
     </div>
@@ -49,8 +58,8 @@
       </nav>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="chroma.min.js"></script>
-    <script>
+    <!-- <script src="chroma.min.js"></script> -->
+    <!-- <script>
       var scale = chroma.scale(['#000000', '#ffffff']).domain([0, 1]);
       $(window).on('scroll', function () {
           if (window.pageYOffset<1080){
@@ -59,6 +68,12 @@
             $('header').css('background-color', '#ffffff');
           }
       });
+    </script> -->
+    <script>
+      function codeAddress() {
+
+        }
+        window.onload = floatImagesIn;
     </script>
   </body>
 </html>
