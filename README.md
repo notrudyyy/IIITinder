@@ -18,3 +18,4 @@ A web based roommate finding service for IIIT students.
 <h1>Contribtuions</h1>
 1. Backend(Flask), Javascript, Home Page, Sign Up Page, Update Page, Matches Page - Anirudh<br />
 2. SQL Test Data, About Page - Ananya<br />
+3. Nothing - Nitin
