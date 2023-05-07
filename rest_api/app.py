@@ -4,11 +4,6 @@ import sqlite3
 import sys
 import os
 
-try:
-    os.remove("users.db")
-except OSError:
-    pass
-
 class DBclass:
     def __init__(self, path):
         self.path = path
@@ -27,28 +22,7 @@ class DBclass:
         self.db.commit()
 user_db = DBclass("users.db")
 
-user_db.execute("""CREATE TABLE IF NOT EXISTS users 
-                    (user_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 
-                     first_name VARCHAR(50), last_name VARCHAR(50), 
-                     age INT, 
-                     phone_no INT, 
-                     email VARCHAR(100),
-                     password VARCHAR(100),
-                     hostel VARCHAR(20),
-                     desc VARCHAR(500),
-                     lang VARCHAR(20),
-                     floor VARCHAR(5),
-                     sleep VARCHAR(5),
-                     env VARCHAR(5),
-                     guest VARCHAR(5),
-                     branch VARCHAR(5),
-                     hobby VARCHAR(50),
-                     nonveg VARCHAR(5),
-                     clean VARCHAR(5))""")
-
-
-
-user_db.commit()
+print(user_db.execute("SELECT * FROM users"), file=sys.stderr)
 
 def insert_into_db(inputdata):
     check = user_db.execute("SELECT * FROM users WHERE email = '"+inputdata["email"].strip()+"'")

@@ -122,6 +122,16 @@ function getClean(clean){
     }
 }
 
+function compare( a, b ) {
+    if ( a["matchpercent"] < b["matchpercent"] ){
+      return 1;
+    }
+    if ( a["matchpercent"] > b["matchpercent"] ){
+      return -1;
+    }
+    return 0;
+}
+
 function getUserMatches(){
     var url = "http://127.0.0.1:5000/get-matches"
     var xhr = new XMLHttpRequest();
@@ -134,9 +144,9 @@ function getUserMatches(){
             if (responseJSON["success"]== "true"){
                 var results = responseJSON["matches"];
                 for (var i=0;i<results.length;i++){
-                    // if(results[i]["email"] == getCookie("user_email")){
-                    //     continue;
-                    // }
+                    if(results[i]["email"] == getCookie("user_email")){
+                        continue;
+                    }
                     var percent = 0;
                     if(results[i]["lang"] == getCookie("user_lang")){
                         percent++;
@@ -166,15 +176,6 @@ function getUserMatches(){
                     results[i]["matchpercent"] = percent;
                     matchdata.push(results[i]);
                 }
-                function compare( a, b ) {
-                    if ( a["matchpercent"] < b["matchpercent"] ){
-                      return -1;
-                    }
-                    if ( a["matchpercent"] > b["matchpercent"] ){
-                      return 1;
-                    }
-                    return 0;
-                }
                 matchdata.sort( compare );
                 document.getElementById("match-name-data").innerText = matchdata[currmatch]["first_name"]+" "+matchdata[currmatch]["last_name"];
                 document.getElementById("match-age-data").innerText = matchdata[currmatch]["age"];
@@ -189,6 +190,7 @@ function getUserMatches(){
                 document.getElementById("match-hobby-data").innerText = matchdata[currmatch]["hobby"];
                 document.getElementById("match-nonveg-data").innerText = getNonVeg(matchdata[currmatch]["non-veg"]);
                 document.getElementById("match-clean-data").innerText = getClean(matchdata[currmatch]["room-desc"]);
+                document.getElementById("match-percent").innerText = Math.floor(matchdata[currmatch]["matchpercent"])+"% match";
             }
         }
     };
@@ -201,3 +203,41 @@ function getUserMatches(){
 window.onload = function() {
     getUserMatches();
 };
+
+window.onclick = e => {
+    if (e.target.className == "reject-btn" || e.target.className == "reject-btn-img"){
+        console.log("testing");
+        currmatch++;
+        if (currmatch < matchdata.length){
+            document.getElementById("match-name-data").innerText = matchdata[currmatch]["first_name"]+" "+matchdata[currmatch]["last_name"];
+            document.getElementById("match-age-data").innerText = matchdata[currmatch]["age"];
+            document.getElementById("match-hostel-data").innerText = getHostel(matchdata[currmatch]["hostel"]);
+            document.getElementById("match-desc-data").innerText = matchdata[currmatch]["desc"];
+            document.getElementById("match-lang-data").innerText = getLang(matchdata[currmatch]["lang"]);
+            document.getElementById("match-floor-data").innerText = getFloor(matchdata[currmatch]["floor"]);
+            document.getElementById("match-sleep-data").innerText = getSleep(matchdata[currmatch]["sleep"]);
+            document.getElementById("match-env-data").innerText = getEnv(matchdata[currmatch]["env"]);
+            document.getElementById("match-guest-data").innerText = getGuests(matchdata[currmatch]["guests"]);
+            document.getElementById("match-branch-data").innerText = matchdata[currmatch]["branch"];
+            document.getElementById("match-hobby-data").innerText = matchdata[currmatch]["hobby"];
+            document.getElementById("match-nonveg-data").innerText = getNonVeg(matchdata[currmatch]["non-veg"]);
+            document.getElementById("match-clean-data").innerText = getClean(matchdata[currmatch]["room-desc"]);
+            document.getElementById("match-percent").innerText = Math.floor(matchdata[currmatch]["matchpercent"])+"% match";
+        } 
+        else{
+            document.getElementById("no-matches").style.opacity = 1;
+            document.getElementById("no-matches").style.zIndex = 100;
+            // currmatch--;
+        }
+    }
+    else if (e.target.className == "accept-btn" || e.target.className == "accept-btn-img"){
+        document.getElementById("match-email").innerText = "Email: "+matchdata[currmatch]["email"];
+        document.getElementById("match-phone").innerText = "Phone No.: "+matchdata[currmatch]["number"];
+        document.getElementById("match-details").style.opacity = 1;
+        document.getElementById("match-details").style.zIndex = 100;
+    }
+    else if (e.target.className == "close-match-details"){
+        document.getElementById("match-details").style.opacity = 0;
+        document.getElementById("match-details").style.zIndex = 0;
+    }
+}
