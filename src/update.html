@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="update.css">
+    <title>IIITinder</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="website-name">IIITinder</div>
+          <ul class="nav-ul-2">
+            <li class="nav-button-1"><a href="index.html"><span class="un nav-button">Home</span></a></li>
+            <li class="nav-button-2"><a href="match.html"><span class="un nav-button">Find Roommates</span></a></li>
+            <li class="nav-button-3"><a href="about.html"><span class="un nav-button">About Us</span></a></li>
+            <li class="nav-button-3"><a href="signup.html"><span class="un nav-button">Sign Up</span></a></li>
+            <li class="nav-button-3"><a href="login.html"><span class="un nav-button">Login</span></a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content-wrapper">
+        <div class="signup-header">
+          Add Your Info
+        </div>
+        <div class="form-wrapper">
+          <div>
+            <label for="hostel">Hostel Name:</label>
+          </div>
+          <div>
+            <select id="hostel_data" name="hostel">
+            <option value="bakul">Bakul</option>
+            <option value="parijaat-a">Parijaat A</option>
+            <option value="parijaat-b">Parijaat B</option>
+            <option value="parijaat-c">Parijaat C</option>
+            <option value="obh">OBH</option>
+            </select>
+          </div>
+          <div>
+            <label for="language">Preffered Language:</label>
+          </div>
+          <div>
+            <select id="lang_data" name="language">
+                <option value="eng">English</option>
+                <option value="tam">Tamil</option>
+                <option value="tel">Telugu</option>
+                <option value="hin">Hindi</option>
+                <option value="urdu">Urdu</option>
+                <option value="bengali">Bengali</option>
+                <option value="punjabi">Punjabi</option>
+                <option value="mall">Malyali</option>
+                <option value="NA">Don't Care</option>
+            </select>
+          </div>
+          <div>
+            <label for="floor">Preffered Floor:</label>
+          </div>
+          <div>
+            <select id="floor_data" name="floor">
+                <option value="1">1st Floor</option>
+                <option value="2">2nd Floor</option>
+                <option value="3">3rd Floor</option>
+                <option value="4">4th Floor</option>
+                <option value="5">5th Floor</option>
+                <option value="NA">Don't Care</option>
+            </select>
+          </div>
+          <div>
+            <label for="sleep">Email:</label>
+          </div>
+          <div>
+            <select id="sleep_data" name="sleep">
+                <option value="1">At Night</option>
+                <option value="2">Past Midnight</option>
+                <option value="3">During the Day</option>
+            </select>
+          </div>
+          <div>
+            <label for="env">Room Ambience:</label>
+          </div>
+          <div>
+            <select id="env_data" name="env">
+                <option value="1">Silent</option>
+                <option value="2">Music</option>
+                <option value="3">Noisy</option>
+            </select>
+          </div>
+          <div>
+            <label for="guest">Are you ok with your roommate bringing guests?</label>
+          </div>
+          <div>
+            <select id="guest_data" name="guest">
+                <option value="1">Ok</option>
+                <option value="2">Not Ok</option>
+            </select>
+          </div>
+          <div>
+            <label for="branch">Branch:</label>
+          </div>
+          <div>
+            <select id="branch_data" name="branch">
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="csd">CSD</option>
+                <option value="chd">CHD</option>
+                <option value="cnd">CND</option>
+                <option value="cld">CLD</option>
+                <option value="ecd">ECD</option>
+            </select>
+          </div>
+          <div>
+            <label for="clean">Room Cleanliness:</label>
+          </div>
+          <div>
+            <select id="clean_data" name="clean">
+                <option value="1">Clean</option>
+                <option value="2">Avearage</option>
+                <option value="3">Messy</option>
+            </select>
+          </div>
+          <div>
+            <label for="nonveg">Are you ok with non-veg food in the room?</label>
+          </div>
+          <div>
+            <select id="nonveg_data" name="nonveg">
+                <option value="1">Yes</option>
+                <option value="2">No</option>
+            </select>
+          </div>
+          <div>
+            <label for="desc">Give a short description of yourself:</label>
+          </div>
+          <div>
+            <input type="text" name="desc" id="desc_data" size="30">
+          </div>
+          <div>
+            <label for="hobby">Name one hobby of yours:</label>
+          </div>
+          <div>
+            <input type="text" name="hobby" id="hobby_data" size="30">
+          </div>
+        </div>
+        <div class="signup-btn">
+          Continue
+        </div>
+        <div id="error-msg"></div>
+      </div>
+    </div>
+    <footer>
+      <nav>
+        <ul class="nav-ul-1">
+          <li class="nav-button-1"><a href="index.html"><span class="nav-button">Home</span></a></li>
+          <li class="nav-button-2"><a href="match.html"><span class="nav-button">Find Roommates</span></a></li>
+          <li class="nav-button-3"><a href="about.html"><span class="nav-button">About Us</span></a></li>
+          <li class="nav-button-3"><a href="signup.html"><span class="nav-button">Sign Up</span></a></li>
+          <li class="nav-button-3"><a href="login.html"><span class="nav-button">Login</span></a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="update.js"></script>
+  </body>
+</html>

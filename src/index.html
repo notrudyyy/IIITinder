@@ -16,18 +16,18 @@
         <nav>
           <div class="website-name">IIITinder</div>
           <ul class="nav-ul-2">
-            <li class="nav-button-1"><a href=""><span class="un nav-button">Home</span></a></li>
-            <li class="nav-button-2"><a href=""><span class="un nav-button">Find Roommates</span></a></li>
-            <li class="nav-button-3"><a href=""><span class="un nav-button">About Us</span></a></li>
-            <li class="nav-button-3"><a href=""><span class="un nav-button">Sign Up</span></a></li>
-            <li class="nav-button-3"><a href=""><span class="un nav-button">Login</span></a></li>
+            <li class="nav-button-1"><a href="index.html"><span class="un nav-button">Home</span></a></li>
+            <li class="nav-button-2"><a href="match.html"><span class="un nav-button">Find Roommates</span></a></li>
+            <li class="nav-button-3"><a href="about.html"><span class="un nav-button">About Us</span></a></li>
+            <li class="nav-button-3"><a href="signup.html"><span class="un nav-button">Sign Up</span></a></li>
+            <li class="nav-button-3"><a href="login.html"><span class="un nav-button">Login</span></a></li>
           </ul>
         </nav>
       </header>
       <div class="content-wrapper">
         <div class="splash-page">
           <div class="splash-header">
-            Find the roommate you've<br /> always looked for.
+            Find the roommate <br /> you've always<br />  looked for.
           </div>
           <div class="splash-images">
             <div class="img1">
@@ -44,36 +44,79 @@
             </div>
           </div>
         </div>
+        <div class="explain-page">
+
+          <div class="explain-header">
+            How It Works
+          </div>
+          <div class="explain-box-container">
+            <div class="explain-box-1">
+              <div class="explain-box-header">
+                Sign Up
+              </div>
+              <div class="explain-box-img-1">
+                <img src="contract.png">
+              </div>
+              <div class="explain-box-desc">
+                Sign up so that others <br />can view your profile!
+              </div>
+            </div>
+            <div class="explain-box-2">
+              <div class="explain-box-header">
+                Search
+              </div>
+              <div class="explain-box-img-2">
+                <img src="search.png">
+              </div>
+              <div class="explain-box-desc">
+                Find the best match using our custom AI/NLP* match system!
+              </div>
+            </div>
+            <div class="explain-box-3">
+              <div class="explain-box-header">
+                Match!
+              </div>
+              <div class="explain-box-img-3">
+                <img src="online-meeting.png">
+              </div>
+              <div class="explain-box-desc">
+                Contact your match and see if they're a good fit!
+              </div>
+            </div>
+          </div>
+          <div class="terms">
+            *Anirudh's Intelligence and Nitin's Language Prowess
+            <hr class="line-boi"/>
+          </div>
+        </div>
+        <div class="signup-now">
+          <div class="signup-text">
+            Sign Up Now!
+          </div>
+            <div class="signup-btn">
+              <a href="signup.html" class="div-link-anchor"><span class="div-link"></span></a>
+              Sign Up
+            </div>
+        </div>
       </div>
     </div>
     <footer>
       <nav>
         <ul class="nav-ul-1">
-          <li class="nav-button-1"><a href=""><span class="nav-button">Home</span></a></li>
-          <li class="nav-button-2"><a href=""><span class="nav-button">Find Roommates</span></a></li>
-          <li class="nav-button-3"><a href=""><span class="nav-button">About Us</span></a></li>
-          <li class="nav-button-3"><a href=""><span class="nav-button">Sign Up</span></a></li>
-          <li class="nav-button-3"><a href=""><span class="nav-button">Login</span></a></li>
+          <li class="nav-button-1"><a href="index.html"><span class="nav-button">Home</span></a></li>
+          <li class="nav-button-2"><a href="match.html"><span class="nav-button">Find Roommates</span></a></li>
+          <li class="nav-button-3"><a href="about.html"><span class="nav-button">About Us</span></a></li>
+          <li class="nav-button-3"><a href="signup.html"><span class="nav-button">Sign Up</span></a></li>
+          <li class="nav-button-3"><a href="login.html"><span class="nav-button">Login</span></a></li>
         </ul>
       </nav>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- <script src="chroma.min.js"></script> -->
-    <!-- <script>
-      var scale = chroma.scale(['#000000', '#ffffff']).domain([0, 1]);
-      $(window).on('scroll', function () {
-          if (window.pageYOffset<1080){
-            $('header').css('background-color', scale(window.pageYOffset/1080));
-          } else{
-            $('header').css('background-color', '#ffffff');
-          }
-      });
-    </script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script>
-      function codeAddress() {
-
-        }
-        window.onload = floatImagesIn;
+      ScrollReveal().reveal('.explain-box-1', { delay: 400 });
+      ScrollReveal().reveal('.explain-box-2', { delay: 400 });
+      ScrollReveal().reveal('.explain-box-3', { delay: 400 });
     </script>
   </body>
 </html>
